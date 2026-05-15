@@ -7,9 +7,9 @@ import fitz  # PyMuPDF
 
 # @safe_execution(component="EXTRACTOR",log_args=True)
 def extract_pdf(path):
-    doc = fitz.open(path)
-    text = ""
-    for page in doc:
-        text += page.get_text()
+    with fitz.open(path) as doc:
+        text = ""
+        for page in doc:
+            text += page.get_text()
     # logger.info("PDF has been extracted. Path:"+path)
     return text
