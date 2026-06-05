@@ -83,6 +83,7 @@ Before producing the final answer:
 3. If an entity is a college/school/university/institute, remove it from COMPANY and keep it only in COLLEGE.
 4. If uncertain whether an organization is a COMPANY or COLLEGE, classify it as COLLEGE if it is an educational institution.
 5. Return only entities explicitly present in the resume.
+6.The positions must contain generic roles like software developer, python engineer, AI engineer, etc. It must not contain something like 'Worked on x project','Collected this value'. It has to be a proper position (JOB ROLE). If the position exceeds 4 words then summarize it down to 4 words or less.
 
 Output format:
 
@@ -118,6 +119,15 @@ Do NOT generate likely educational institutions.
 Every extracted entity must be an exact substring of the resume text.
 
 If a value does not appear literally in the resume, do not output it.
+POSITION MUST be a professional job role.
+
+Do NOT include:
+- project names
+- repository names
+- products
+- publications
+- research papers
+- software systems
 """
    response = ollama.chat(
       model="qwen2.5",

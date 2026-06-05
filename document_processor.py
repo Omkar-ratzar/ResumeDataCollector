@@ -10,7 +10,7 @@ import phonenumbers
 from phonenumbers import geocoder, carrier, timezone, number_type
 
 
-path="Resumes\Omkar_swami_res.pdf"
+path="E:\\Coding\\ResumeDataExtractor\\Resumes\\rajan_swami_resume.pdf"
 resume_text=(extract_pdf(path))
 
 print(resume_text)
@@ -18,9 +18,14 @@ print(resume_text)
 nlp = spacy.load("en_core_web_trf")
 
 doc = nlp(resume_text)
-for ent in doc.ents:
-    if(ent.label_=="PERSON"):
-        print(ent.text)
+print()
+print()
+print(doc)
+print()
+print()
+# for ent in doc.ents:
+#     if(ent.label_=="PERSON"):
+#         print(ent.text)
 
 
 def email_phone_re(resume_text):

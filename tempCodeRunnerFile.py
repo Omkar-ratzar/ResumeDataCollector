@@ -1,1 +1,1 @@
-auto
+"E:\\Coding\\ResumeDataExtractor\\Resumes\\rajan_swami_resume.pdf"

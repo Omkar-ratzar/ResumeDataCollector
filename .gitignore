@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Environment variables
+.env
+
+# Training outputs
+output/
+training_output/
+
+# SpaCy binary datasets
+*.spacy
+
+# Large generated datasets
+resume_dataset.jsonl
+resume_dataset_reviewed.jsonl
+
+train.jsonl
+dev.jsonl
+test.jsonl
+
+# Review files
+resume_review.xlsx
+
+# Temporary files
+tempCodeRunnerFile.py
+span_problems.json
+
+# Raw resumes (privacy + size)
+Resumes/
+*.pdf
+
+# Model artifacts
+model-best/
+model-last/
+
+# OCR experiments
+ocr_test_input.pdf
